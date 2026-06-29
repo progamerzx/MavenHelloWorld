@@ -26,3 +26,6 @@ steps:
     repository: 'newstore'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
+- task: CmdLine@2
+  inputs:
+    script: 'docker pull newstore:35'
