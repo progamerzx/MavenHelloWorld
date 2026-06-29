@@ -28,4 +28,4 @@ steps:
     Dockerfile: '**/AzureDockerfile'
 - task: CmdLine@2
   inputs:
-    script: 'docker pull newstore:35'
+    script: 'docker pull newstore'
