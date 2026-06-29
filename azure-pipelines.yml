@@ -22,12 +22,7 @@ steps:
     goals: 'package'
 - task: Docker@2
   inputs:
-    containerRegistry: 'dockhub'
-    repository: 'ctslab/azdevops'
-    command: 'build'
-    Dockerfile: '**/AzureDockerfile'
-- task: Docker@2
-  inputs:
     containerRegistry: 'ACR'
     repository: 'newstore'
-    command: 'push'
+    command: 'buildAndPush'
+    Dockerfile: '**/AzureDockerfile'
