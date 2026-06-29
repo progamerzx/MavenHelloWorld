@@ -26,6 +26,10 @@ steps:
     repository: 'newstore'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'ACR'
+    command: 'login'
 - task: CmdLine@2
   inputs:
     script: 'docker pull newstore'
